@@ -1,0 +1,41 @@
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+.navbar-brand {
+    display: inline-block;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
+.navbar-toggler {
+    font-size: 1.25rem;
+    line-height: 1;
+}
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    content: "";
+    background: no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+.bg-inverse {
+    background-color: #292b2c!important;
+}
+.navbar {
+    position: relative;
+    padding: .5rem 1rem;
+}

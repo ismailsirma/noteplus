@@ -1,0 +1,49 @@
+-- create db
+CREATE DATABASE IF NOT EXISTS sampledb;
+USE sampledb;
+
+DROP TABLE NOTE;
+CREATE TABLE IF NOT EXISTS NOTE (
+  NOTE_ID int(10) NOT NULL AUTO_INCREMENT,
+  TITLE varchar(200) NOT NULL,
+  TODO_ID int(10) NOT NULL,
+  PRIMARY KEY (NOTE_ID)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+-- insert note table
+INSERT INTO NOTE (NOTE_ID, TITLE, TODO_ID) VALUES
+	(1, 'First Spring', 1),
+	(2, 'Second Security', 2),
+	(3, 'Third Popular Frameworks', 3);
+
+DROP TABLE TODO;
+CREATE TABLE IF NOT EXISTS TODO (
+  TODO_ID int(10) NOT NULL AUTO_INCREMENT,
+  NAME varchar(200) NOT NULL,
+  DESCRIPTION varchar(200) NOT NULL,
+  DEADLINE DATETIME NOT NULL,
+  RELATED_TODO_ID int(10) NULL,
+  STATUS BIT NOT NULL,
+  PRIMARY KEY (TODO_ID)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+-- insert note table
+INSERT INTO TODO (TODO_ID, NAME, DESCRIPTION, DEADLINE, RELATED_TODO_ID, STATUS) VALUES
+	(1, 'CreateRestService', 'Create Restful Service', '2019-03-15',null, 1),
+	(2, 'Login', 'Create login page', '2019-03-15',null, 1),
+	(3, 'PickUI', 'Pick a UI framework', '2019-03-15',null, 1);
+
+SELECT * FROM USERINFO u WHERE u.USERNAME = 'sirmam' and u.STATUS= true
+-- select * from USERINFO;
+
+DROP TABLE USER;
+CREATE TABLE IF NOT EXISTS USERINFO (
+  USERNAME varchar(50) NOT NULL,
+  PASSWORD varchar(100) NOT NULL,
+  FULL_NAME varchar(100) NOT NULL,
+  ROLE varchar(50) NOT NULL,
+  STATUS BIT NOT NULL,
+  PRIMARY KEY (USERNAME)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+-- insert user data
+INSERT INTO USERINFO (USERNAME, PASSWORD, FULL_NAME, ROLE, STATUS) VALUES
+('sirmam', 'abc123', 'Ismail Sirma', 'ROLE_ADMIN',  1);
+	-- ('sirmam', '$2a$10$N0eqNiuikWCy9ETQ1rdau.XEELcyEO7kukkfoiNISk/9F7gw6eB0W', 'Ismail Sirma', 'ROLE_ADMIN',  1);
