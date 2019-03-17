@@ -22,12 +22,14 @@ public class NoteService implements INoteService {
 	}
 	@Override
 	public synchronized boolean addNote(Note note){
+		/*
        if (noteDAO.noteExists(note.getTitle())) {
     	   return false;
        } else {
+       */
     	   noteDAO.addNote(note);
     	   return true;
-       }
+       //}
 	}
 	@Override
 	public void updateNote(Note note) {

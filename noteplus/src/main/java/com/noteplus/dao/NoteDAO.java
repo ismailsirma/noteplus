@@ -29,9 +29,9 @@ public class NoteDAO implements INoteDAO {
 	}
 	@Override
 	public void updateNote(Note note) {
-		Note artcl = getNoteById(note.getNoteId());
-		artcl.setTitle(note.getTitle());
-		artcl.setTodoId(note.getTodoId());
+		Note nt = getNoteById(note.getNoteId());
+		nt.setTitle(note.getTitle());
+		nt.setTodoId(note.getTodoId());
 		entityManager.flush();
 	}
 	@Override

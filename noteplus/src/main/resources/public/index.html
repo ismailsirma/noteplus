@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <!-- <link rel="icon" href="./favicon.ico"> -->
 
-    <title>Note Taking</title>
+    <title>Noteplus - To Do List Application</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
 
     <!-- Bootstrap core CSS -->
@@ -22,9 +22,9 @@
     <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <!-- <span class="navbar-toggler-icon"></span> -->
-		<i class="glyphicon glyphicon-cloud"></i>
+		<i class="glyphicon glyphicon-cloud">Home</i>
       </button>
-      <a class="navbar-brand" href="/">noteplus</a>
+      <a class="navbar-brand" href="./index.html">noteplus</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -32,9 +32,11 @@
             <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./editor.html">Add Note</a>
+            <a class="nav-link" href="./editor.html">Add a To Do List</a>
           </li>
-
+          <li class="nav-item">
+            <a class="nav-link" href="./todo-editor.html">Add a To Do Item</a>
+          </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="text" placeholder="Search">
@@ -43,16 +45,14 @@
       </div>
     </nav>
 
-
-<!-- stil 2  başla -->	
 	<main role="main">
 
   <!-- Main jumbotron for a primary marketing message or call to action -->
   <div class="jumbotron">
     <div class="container">
       <h1 class="display-3">Welcome!</h1>
-      <p>This is a note taking app.</p>
-      <p><a class="btn btn-primary btn-lg" href="./editor.html" role="button">Add a note &raquo;</a></p>
+      <p>This is a to do list and a note taking app.</p>
+      <p><a class="btn btn-primary btn-lg" href="./editor.html" role="button">Add a list of to-do's first &raquo;</a></p>
     </div>
   </div>
 
@@ -60,7 +60,7 @@
     <!-- Example row of columns -->
     <div class="row">
 	    <div class="card">
-            <div class="list-group list-group-flush"> <!-- all notes will be here -->
+            <div class="list-group list-group-flush"> <!-- all to do lists will be here -->
             </div>
         </div>
 
@@ -72,15 +72,12 @@
 
 </main>
 
-<!-- stil 2  bitis -->	
-
 
 <footer class="container">
   <p>&copy; noteplus 2019</p>
 </footer>
 
     <script src="./js/jquery-3.3.1.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="./js/bootstrap.min.js"></script>
 	 <script src="./js/app-noteplus.js"></script>
   </body>
