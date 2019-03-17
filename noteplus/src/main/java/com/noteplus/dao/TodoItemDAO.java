@@ -20,7 +20,7 @@ public class TodoItemDAO implements ITodoItemDAO {
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<TodoItem> getAllTodoItems() {
-		String hql = "SELECT t FROM TodoItem t ORDER BY t.todoItemId";
+		String hql = "SELECT t FROM TodoItem t ORDER BY t.todoId";
 		return (List<TodoItem>) entityManager.createQuery(hql).getResultList();
 	}	
 	@Override

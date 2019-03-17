@@ -24,7 +24,7 @@ public class TodoItem implements Serializable {
 	@Column(name="DEADLINE")
     private Date deadline;	
 	@Column(name="RELATED_TODO_ID")
-    private int relatedTodoId;  
+    private Integer relatedTodoId;  
 	@Column(name="STATUS")	
 	private boolean status;
 	
@@ -52,10 +52,10 @@ public class TodoItem implements Serializable {
 	public void setDeadline(Date deadline) {
 		this.deadline = deadline;
 	}
-	public int getRelatedTodoId() {
+	public Integer getRelatedTodoId() {
 		return relatedTodoId;
 	}
-	public void setRelatedTodoId(int relatedTodoId) {
+	public void setRelatedTodoId(Integer relatedTodoId) {
 		this.relatedTodoId = relatedTodoId;
 	}
 	public boolean getStatus() {
