@@ -3,9 +3,11 @@ package com.noteplus.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import com.noteplus.dao.INoteDAO;
 import com.noteplus.entity.Note;
+@Component
 public class NoteService implements INoteService {
 	@Autowired
 	private INoteDAO noteDAO;

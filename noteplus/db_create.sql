@@ -31,10 +31,10 @@ INSERT INTO TODO (TODO_ID, NAME, DESCRIPTION, DEADLINE, RELATED_TODO_ID, STATUS)
 	(2, 'Login', 'Create login page', '2019-03-15',null, 1),
 	(3, 'PickUI', 'Pick a UI framework', '2019-03-15',null, 1);
 
-SELECT * FROM USERINFO u WHERE u.USERNAME = 'sirmam' and u.STATUS= true
+SELECT * FROM USERINFO WHERE USERNAME = 'sirmam' and STATUS= true
 -- select * from USERINFO;
 
-DROP TABLE USER;
+--DROP TABLE USERINFO;
 CREATE TABLE IF NOT EXISTS USERINFO (
   USERNAME varchar(50) NOT NULL,
   PASSWORD varchar(100) NOT NULL,
@@ -45,5 +45,6 @@ CREATE TABLE IF NOT EXISTS USERINFO (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 -- insert user data
 INSERT INTO USERINFO (USERNAME, PASSWORD, FULL_NAME, ROLE, STATUS) VALUES
+('user', 'pass', 'Anonymous', 'ROLE_USER',  1),
 ('sirmam', 'abc123', 'Ismail Sirma', 'ROLE_ADMIN',  1);
 	-- ('sirmam', '$2a$10$N0eqNiuikWCy9ETQ1rdau.XEELcyEO7kukkfoiNISk/9F7gw6eB0W', 'Ismail Sirma', 'ROLE_ADMIN',  1);

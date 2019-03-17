@@ -3,9 +3,10 @@ package com.noteplus.service;
 import java.util.List;
 
 import org.springframework.security.access.annotation.Secured;
+import org.springframework.stereotype.Component;
 
 import com.noteplus.entity.Note;
-
+@Component
 public interface INoteService {
 	 @Secured ({"ROLE_ADMIN", "ROLE_USER"})
      List<Note> getAllNotes();
